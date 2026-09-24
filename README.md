@@ -84,12 +84,15 @@ If the primary model fails, the fallback model is used.
 ## 📁 Project Structure
 ```text
 college-rag-assistant/
-├── data/
-│   ├── raw_pdfs/Drive_Link.txt
+├── app/
+│   └── college_rag_assistant.py
 ├── models/
 │   ├── chunks.pkl
 │   ├── embeddings.npy
 │   └── college_index.faiss
+├── notebooks/
+│   ├── RAG1.ipynb
+│   ├──RAG2.ipynb
 ├── src/
 │   ├── ingestion/
 │   ├── retrieval/
@@ -100,10 +103,6 @@ college-rag-assistant/
 │   │   └── llm_client.py
 │   ├── config.py
 │   └── rag_pipeline.py
-├── app/
-│   └── college_rag_assistant.py
-├── tests/
-├── notebooks/RAG.ipynb
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
