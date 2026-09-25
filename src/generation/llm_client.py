@@ -1,4 +1,4 @@
-import os
+import streamlit as st
 
 from google import genai
 from google.genai import types
@@ -10,7 +10,7 @@ from src.config import (
 )
 
 
-api_key = os.getenv(GEMINI_API_KEY_ENV)
+api_key = st.secrets["GEMINI_API_KEY"]
 
 if not api_key:
     raise ValueError("GEMINI_API_KEY environment variable is not set.")
