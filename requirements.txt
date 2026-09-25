@@ -3,3 +3,5 @@ sentence-transformers
 faiss-cpu
 google-genai
 numpy
+torch
+torchvision
