@@ -1,4 +1,5 @@
 pypdf
+fonttools
 langchain-text-splitters
 sentence-transformers
 torch
