@@ -1,7 +1,6 @@
 import streamlit as st
 
 from google import genai
-from google.genai import types
 
 from src.config import (
     PRIMARY_MODEL,
@@ -19,19 +18,12 @@ client = genai.Client(api_key=api_key)
 
 
 def generate_answer(prompt):
-    """Generate an answer using Gemini with Google Search grounding."""
-
-    google_search_tool = types.Tool(
-        google_search=types.GoogleSearch()
-    )
+    """Generate an answer using Gemini."""
 
     try:
         response = client.models.generate_content(
             model=PRIMARY_MODEL,
             contents=prompt,
-            config=types.GenerateContentConfig(
-                tools=[google_search_tool]
-            ),
         )
 
         return {
@@ -47,9 +39,6 @@ def generate_answer(prompt):
             response = client.models.generate_content(
                 model=FALLBACK_MODEL,
                 contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[google_search_tool]
-                ),
             )
 
             return {
