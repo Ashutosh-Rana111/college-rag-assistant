@@ -79,7 +79,7 @@ st.markdown(
 
 st.markdown(
     '<div class="subtitle">'
-    "Ask questions about UIET, academics, departments, facilities, "
+    "Ask questions about UIET, academics, hostel, facilities, "
     "rules, procedures, courses, and more."
     "</div>",
     unsafe_allow_html=True,
@@ -137,7 +137,10 @@ if submitted and question.strip():
 
             for source in result["sources"]:
                 st.markdown(
-                    f'<div class="source-box">📄 {source}</div>',
+                    f'<div class="source-box">'
+                    f'📄 <a href="https://drive.google.com/drive/folders/1jSM7QkAaE5sfkPfToyazpeyz9geavI-F?usp=drive_link" target="_blank">'
+                    f'{source}'
+                    f'</a></div>',
                     unsafe_allow_html=True,
                 )
 
