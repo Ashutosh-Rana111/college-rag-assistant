@@ -39,7 +39,8 @@ def generate_answer(prompt):
             "model": PRIMARY_MODEL,
         }
 
-    except Exception:
+    except Exception as e:
+        print("PRIMARY GEMINI ERROR:", repr(e))
         print("Primary model failed. Using fallback model...")
 
         try:
@@ -56,7 +57,8 @@ def generate_answer(prompt):
                 "model": FALLBACK_MODEL,
             }
 
-        except Exception:
+        except Exception as e:
+            print("FALLBACK GEMINI ERROR:", repr(e))
             return {
                 "answer": "Sorry, the AI service is currently unavailable.",
                 "model": None,
