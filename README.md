@@ -4,6 +4,10 @@ A Retrieval-Augmented Generation (RAG) based college knowledge assistant built f
 
 The application lets users ask questions about college academics, facilities, departments, rules, procedures, and other information contained in the college's source documents.
 
+## 🚀 Live Demo
+
+https://uiet-assistant.streamlit.app/
+
 ## ✨ Features
 
 - PDF-based knowledge retrieval
